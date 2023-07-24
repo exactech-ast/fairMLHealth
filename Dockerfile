@@ -1,9 +1,9 @@
-FROM kentoso.azurecr.io/kensciml/python37:latest AS setup
+FROM python:3.9-bookworm
 
 RUN apt-get update && apt-get install -y libgomp1
 RUN apt-get install -y libgomp1 gcc g++
 
-WORKDIR /kensci
+WORKDIR /dev
 COPY . .
 
 # Call script that sets up and runs test environment

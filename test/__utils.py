@@ -26,25 +26,9 @@ def get_urls(text_string):
         list: list of urls detected
     """
     # Regex is proved to be the most robust option assuming "http" or "https"
-    url_pattern = r"(https?://[^\s]+)"
-    raw_urls = re.findall(url_pattern, text_string)
-    output = []
-    while any(raw_urls):
-        url = raw_urls.pop()
-        # Markdown of format [text](link) displaying a url as text
-        #     (i.e. "[url](url)") should be split and added back to the list
-        if "](http" in url:
-            raw_urls += url.split("](http")
-            raw_urls[1] = "http" + raw_urls[1]
-            continue
-        else:
-            # Remove errant leading & trailing symbols will be recognized as
-            #   part of the url
-            url = url.rstrip()
-            while __invalid_url_delimiter(url[-1]):
-                url = url[:-1]
-            output.append(url)
-    return output
+    url_pattern = r"https?://[^\s]+"
+    urls = re.findall(url_pattern, text_string)
+    return urls
 
 
 def get_url_status(url, tryonce=False):
@@ -84,7 +68,7 @@ def is_test_environment():
     Returns:
         bool: True if running in the test environment
     """
-    return os.environ.get("IS_CICD", False)
+    return os.environ.get("ISTESTENV", False)
 
 
 def is_url_valid(url):

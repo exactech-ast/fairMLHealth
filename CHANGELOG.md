@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. Please do f
 
 _“Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.”_ - Rumi
 
+## [1.1.0] - 2023-07-24
+### Installation and Test Corrections
+- updated docker to use publicly available python image python:3.9-bookworm
+- Corrected bug in url tester that incorrectly parsed certain URLs
+- Corrected version incompatibility among multiple packages (AIF360, pandas, scipy, scikit-learn) for this version of python that prevented installation of the package
+
 ## [1.0.2] - 2021-09-13
 ### Pages Hotfix
 - Corrections to some math formatting in documentation that could not be resolved by GitHub pages
