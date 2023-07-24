@@ -112,5 +112,5 @@ As you update your PR and apply changes, mark each conversation as [resolved](ht
 
 ## Attribution
 
-These contribution guidelines are adapted from [GitHub Docs][https://github.com/github/docs], available at [https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request)
+These contribution guidelines are adapted from [GitHub Docs](https://github.com/github/docs), available at https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request
 

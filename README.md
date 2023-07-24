@@ -385,15 +385,17 @@ See also: [Publications](./docs/publications)
 ```
 
 ### Courses that use FairMLHealth
+* BEE 520: *Predictive Learning From Data* Winter 2022 Department of Electrical Engineering, University of Washington Bothell
+* CSS 581: *Machine Learning* Autumn 2021 Department of Computer Science, University of Washington Bothell
 * TCSS 593: *Research Seminar In Data Science* Spring 2021 Department of Computer Science, University of Washington Tacoma
-* EE 520: *Predictive Learning From Data Spring 2021* Department of Electrical Engineering, University of Washington Bothell
-* CSS 581: *Machine Learning Autumn 2020* Department of Computer Science, University of Washington Bothell
+* BEE 520: *Predictive Learning From Data* Spring 2021 Department of Electrical Engineering, University of Washington Bothell
+* CSS 581: *Machine Learning* Autumn 2020 Department of Computer Science, University of Washington Bothell
 
 ## Key Contributors
 * [Muhammad Aurangzeb Ahmad](http://www.aurumahmad.com)
 * [Christine Allen](https://github.com/camagallen)
 * Carly Eckert
-* Juhua Hu
+* [Juhua Hu](http://faculty.washington.edu/juhuah/)
 * Vikas Kumar
 * Arpit Patel
-* Ankur Teredesai
+* [Ankur Teredesai](https://faculty.washington.edu/ankurt/)
