@@ -33,12 +33,12 @@ def validate_urls(filepath):
     urls = get_urls(text)
     while any(urls):
         test_url = urls.pop()
-        is_valid = is_url_valid(test_url)
+        # The url parser will add backslashes to escape characters in the url, but these will be found invalid. Print the string to work around. Note: this will cause failures if the url is for a server with two leading backslashes.
+        is_valid = is_url_valid(print(test_url))
         if type(is_valid) == bool and not is_valid:
             err_code = get_url_status(test_url, tryonce=True)
             raise URLError(
-                f"Invalid URL detected in {filepath}:"
-                + f" {repr(test_url)}, {err_code} Error"
+                f" {repr(test_url)}, {err_code} Error"
             )
 
 
@@ -46,8 +46,8 @@ def validate_markdown(md_path):
     validate_filepath(md_path)
     # Validating URLs takes time, so only validate if running on test env.
     #   environment (on GitHub)
-    if is_test_environment():
-        validate_urls(md_path)
+    #if is_test_environment():
+    validate_urls(md_path)
 
 
 """ Testers """

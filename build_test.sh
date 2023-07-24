@@ -1,14 +1,11 @@
 #!/bin/bash
-# About: Sets-up test environment & runs tests; for use in development of
-#   this library
 
 # Set up test environment
 python3 -m pip install --upgrade wheel setuptools pip
-python3 setup.py install
 python3 -m pip install -U pytest
 
 # Add flag to indicate CI test environment
-export IS_CICD=true
+export ISTESTENV=true
 
 # Force install of test dependencies before running pytest (should happen
 #   automatically but sometimes fails)

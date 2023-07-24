@@ -34,16 +34,16 @@ def get_urls(text_string):
         # Markdown of format [text](link) displaying a url as text
         #     (i.e. "[url](url)") should be split and added back to the list
         if "](http" in url:
-            raw_urls += url.split("](http")
-            raw_urls[1] = "http" + raw_urls[1]
-            continue
-        else:
-            # Remove errant leading & trailing symbols will be recognized as
-            #   part of the url
-            url = url.rstrip()
-            while __invalid_url_delimiter(url[-1]):
-                url = url[:-1]
-            output.append(url)
+            temp_url = url.split("](http")
+            url = "http" + temp_url[1]
+        
+        # Remove errant trailing symbols will be recognized as
+        #   part of the url
+        url = url.rstrip()
+        while __invalid_url_delimiter(url[-1]):
+            url = url[:-1]
+        output.append(url)
+   
     return output
 
 
@@ -84,7 +84,7 @@ def is_test_environment():
     Returns:
         bool: True if running in the test environment
     """
-    return os.environ.get("IS_CICD", False)
+    return os.environ.get("ISTESTENV", False)
 
 
 def is_url_valid(url):
