@@ -4,11 +4,11 @@ All notable changes to this project will be documented in this file. Please do f
 
 _“Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.”_ - Rumi
 
-## [1.1.0] - 2021-09-13
+## [1.1.0] - 2023-07-24
 ### Installation and Test Corrections
-- Corrected new package incompatibility that blocked installation 
 - Updated Docker image to enable development outside of KenSci
-- Corrected bug in url tester that emerged with the new docker image
+- Corrected bug in url tester that was revealed by the new docker image (required)
+- Corrected recent package incompatibility that blocked installation 
 
 ## [1.0.2] - 2021-09-13
 ### Pages Hotfix

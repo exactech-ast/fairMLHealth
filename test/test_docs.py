@@ -33,7 +33,7 @@ def validate_urls(filepath):
     urls = get_urls(text)
     while any(urls):
         test_url = urls.pop()
-        # The url parser will add backslashes to escape characters in the url, but these will be found invalid. The below prints the string as a work-around. Note: this will cause failures if the url is for a server with two leading backslashes.
+        # The url parser will add backslashes to escape characters in the url, but these will be found invalid. The below prints the string as a work-around. Note: this will cause failures if the url is for an address with two leading backslashes.
         is_valid = is_url_valid(print(test_url))
         if type(is_valid) == bool and not is_valid:
             err_code = get_url_status(test_url, tryonce=True)
