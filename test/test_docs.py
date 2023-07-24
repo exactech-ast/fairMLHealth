@@ -38,7 +38,8 @@ def validate_urls(filepath):
         if type(is_valid) == bool and not is_valid:
             err_code = get_url_status(test_url, tryonce=True)
             raise URLError(
-                f" {repr(test_url)}, {err_code} Error"
+                f"Invalid URL detected in {filepath}:"
+                + f" {repr(test_url)}, {err_code} Error"
             )
 
 
