@@ -3,7 +3,7 @@ FROM python:3.9-bookworm
 RUN apt-get update && apt-get install -y libgomp1
 RUN apt-get install -y libgomp1 gcc g++
 
-WORKDIR /fmlhealth
+WORKDIR /dev
 COPY . .
 
 # Call script that sets up and runs test environment
