@@ -37,8 +37,7 @@ def get_urls(text_string):
             temp_url = url.split("](http")
             url = "http" + temp_url[1]
         
-        # Remove errant trailing symbols will be recognized as
-        #   part of the url
+        # Remove errant trailing symbols that will be recognized as part of the url
         url = url.rstrip()
         while __invalid_url_delimiter(url[-1]):
             url = url[:-1]
